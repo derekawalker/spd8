@@ -1,0 +1,4 @@
+name: salt-project
+recipe: drupal8
+config:
+  webroot: web
