@@ -1,0 +1,22 @@
+name: Salt Project
+type: theme
+description: 'A base theme with sensible default CSS classes added. Learn how to use Salt Project as a base theme in the <a href="https://www.drupal.org/docs/8/theming">Drupal 8 Theming Guide</a>.'
+package: Core
+version: VERSION
+core: 8.x
+base theme: classy
+
+libraries:
+  - saltproject/base
+
+regions:
+  userbar: User Bar
+  header: Header
+  banner: Banner
+  sidebar_first: First Sidebar
+  content: Content
+  content_top: Content Top
+  content_bottom: Content Bottom
+  sidebar_second: Second Sidebar
+  footer_banner: Footer Banner
+  footer: Footer

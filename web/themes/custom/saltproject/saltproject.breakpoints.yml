@@ -1,0 +1,45 @@
+saltproject.layout.mobile:
+  group: saltproject.layout
+  label: mobile
+  mediaQuery: ""
+  weight: 3
+  multipliers:
+    - 1x
+saltproject.layout.tablet:
+  group: saltproject.layout
+  label: tablet
+  mediaQuery: "(min-width: 768px) and (max-width: 1023px)"
+  weight: 2
+  multipliers:
+    - 1x
+saltproject.layout.desktop:
+  group: saltproject.layout
+  label: dekstop
+  mediaQuery: "(min-width: 1024px) and (max-width: 1364px)"
+  weight: 1
+  multipliers:
+    - 1x
+saltproject.layout.wide:
+  group: saltproject.layout
+  label: wide
+  mediaQuery: "(min-width: 1365px)"
+  weight: 0
+  multipliers:
+    - 1x
+
+saltproject.images.mobile:
+  group: saltproject.images
+  label: mobile
+  mediaQuery: ""
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+saltproject.images.desktop:
+  group: saltproject.images
+  label: desktop
+  mediaQuery: "(min-width: 1024px)"
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
