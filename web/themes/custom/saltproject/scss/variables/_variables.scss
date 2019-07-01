@@ -1,17 +1,40 @@
 /* Breakpoints */
+$phab: 568px;
 $tab: 768px;
 $desk: 1024px;
 $wide: 1340px;
+$max-width: 1440px;
 
 /* Typography */
 $font-main: Lato,
 Arial,
+Helvetica,
 sans-serif;
-$font-heading: Raleway,
-Arrial,
+$font-header: Raleway,
+Lato,
+Arial,
+Helvetica,
 sans-serif;
+$font-script: Satisfy,
+cursive;
 
 /* Colors */
+$orange: #f1623e;
+$teal: #1aa489;
 $black: #000;
+$black-50: rgba(0, 0, 0, .5);
 $white: #fff;
-$gray-dark: #333;
+$white-90: rgba(255, 255, 255, .85);
+$gray-f1: #f1f1f1;
+$gray-e6: #e6e6e6;
+$gray-d: #ddd;
+$gray-c: #ccc;
+$gray-b: #bbb;
+$gray-3: #333;
+$gray-6: #666;
+$gray-9: #999;
+
+/* Decorations */
+$rad-inner: 3px;
+$rad: 5px;
+$rad-outer: 8px;

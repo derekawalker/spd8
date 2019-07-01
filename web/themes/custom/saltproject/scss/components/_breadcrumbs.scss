@@ -1,0 +1,50 @@
+// Mobile (up to 447px) ---------------------------------
+// ------------------------------------------------------
+.region-banner {
+  .breadcrumb {
+    padding: 0;
+
+    ol {
+      display: flex;
+      flex-flow: row wrap;
+
+      li {
+        display: block;
+
+        &:before {
+          padding-right: 2px;
+          padding-left: 3px;
+          color: $gray-9;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: .1em;
+        text-decoration: none;
+        color: $gray-c;
+        display: inline-block;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {}

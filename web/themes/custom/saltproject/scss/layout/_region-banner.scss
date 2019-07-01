@@ -1,0 +1,31 @@
+// Mobile (up to 447px) ---------------------------------
+// ------------------------------------------------------
+.region-banner {
+  background: linear-gradient(to bottom, $gray-3, $gray-6);
+
+  .region-inner {
+    padding: .75rem 1.5rem;
+  }
+}
+
+.path-frontpage {
+  .region-banner {
+    background: none;
+
+    .region-inner {
+      padding: 0;
+    }
+  }
+}
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {}

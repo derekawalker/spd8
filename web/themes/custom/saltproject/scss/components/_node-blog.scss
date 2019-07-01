@@ -1,0 +1,222 @@
+// Mobile (up to 447px) ---------------------------------
+// ------------------------------------------------------
+.node--type-post {
+  .field--name-field-post-date {
+    margin: .25rem 0 .5rem;
+    font-size: .75em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: $gray-9;
+  }
+
+  .field--name-field-image {
+    margin-bottom: 1rem;
+
+    img {
+      display: block;
+    }
+  }
+
+  .field--name-body {
+    img {
+      display: block;
+    }
+
+    picture {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    >div {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      picture {
+        &:first-child {
+          margin-right: .5rem;
+        }
+
+        &:last-child {
+          margin-left: .5rem;
+        }
+      }
+    }
+  }
+
+  .field--name-field-signature {
+    font-family: $font-script;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $gray-e6;
+    font-size: 2em;
+
+    &:before {
+      content: "- ";
+    }
+  }
+
+  .field--name-field-sponsored {
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .field--name-field-hours {
+    margin-bottom: 1.5rem;
+  }
+
+  .field--name-field-entrance-fees {
+    margin-bottom: 1.5rem;
+  }
+
+  .field--name-field-phone {
+    margin-bottom: 1.5rem;
+
+    a {
+      display: block;
+      background: $teal;
+      color: $white;
+      border-radius: 25px;
+      padding: 0 1em;
+      height: 50px;
+      line-height: 50px;
+      text-decoration: none;
+      font-size: 1.25rem;
+      text-align: center;
+      font-weight: 400;
+      box-shadow: 2px 4px 4px rgba(0, 0, 0, .25);
+      transition: all .5s ease-out;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: lighten($teal, 10%);
+        box-shadow: inset 2px 4px 4px rgba(0, 0, 0, .25);
+        transition: all .25s ease-out;
+      }
+    }
+  }
+
+  .field--name-field-address {
+    margin-bottom: .5rem;
+    text-align: center;
+  }
+
+  .field--name-field-location {
+    margin-bottom: 1.5rem;
+  }
+
+  .field--name-field-tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .field__item {
+      a {
+        margin: .25em;
+        display: block;
+        border: 1px solid $teal;
+        border-radius: $rad * 3;
+        text-decoration: none;
+        padding: .35em 1.25em .25em;
+        font-size: .6875em;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        font-weight: 400;
+        background: $white;
+        color: $teal;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background: $teal;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .node__links {
+    background: $gray-f1;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: $rad;
+  }
+}
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {
+  .node--type-post {
+    .field--name-body {
+      img {
+        display: block;
+      }
+
+      >div {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        picture {
+          &:first-child {
+            margin-right: .5rem;
+          }
+
+          &:last-child {
+            margin-left: .5rem;
+          }
+        }
+      }
+    }
+
+    .field--name-field-phone {
+      a {
+        display: inline;
+        background: none;
+        color: $teal;
+        border-radius: 0;
+        padding: 0;
+        line-height: 1.5;
+        font-size: 1em;
+        text-align: left;
+        font-weight: 300;
+        box-shadow: none;
+        transition: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background: none;
+          box-shadow: none;
+          transition: none;
+        }
+      }
+    }
+
+    .field--name-field-address {
+      text-align: left;
+    }
+
+    .field--name-field-tags {
+      justify-content: flex-start;
+    }
+  }
+}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {}

@@ -1,0 +1,91 @@
+// Mobile (up to 447px) ---------------------------------
+// ------------------------------------------------------
+.view-posts.view-display-id-block_2 {
+  .views-row {
+    padding: .5rem;
+    background: $white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    transition: all .25s ease-out;
+
+    &:hover {
+      transform: scale(1.01);
+      transition: all .5s ease-out;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, .25);
+    }
+  }
+
+  .home-post-item-teaser {
+    position: relative;
+
+    &--image {
+      img {
+        display: block;
+      }
+    }
+
+    &--title {
+      margin: 0;
+      background: $white;
+      padding: 1rem 1rem .75rem;
+      font-size: 1.125em;
+
+      a {
+        color: $orange;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: lighten($orange, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Phablet (568px to 767px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $phab) {
+  .view-posts.view-display-id-block_2 {
+    .view-content {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    .views-row {
+      width: 48%;
+    }
+  }
+}
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {
+  .view-posts.view-display-id-block_2 {
+    .views-row {
+      width: 31%;
+    }
+  }
+}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {
+  .view-posts.view-display-id-block_2 {
+    .views-row {
+      width: 15%;
+    }
+  }
+}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {
+  .view-posts.view-display-id-block_2 {
+    .views-row {
+      width: 100%;
+    }
+  }
+}

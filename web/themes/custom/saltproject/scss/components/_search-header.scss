@@ -1,0 +1,110 @@
+// Mobile (up to 447px) ---------------------------------
+// ------------------------------------------------------
+.region-header {
+  .search-block-form {
+    margin: 0;
+    width: 100%;
+
+    .contextual {
+      right: auto;
+      left: 1rem;
+    }
+
+    >form {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .form-item {
+      margin: 0;
+      height: 40px;
+      width: 100%;
+    }
+
+    .form-search {
+      border: 1px solid $gray-c;
+      border-right: 0;
+      border-radius: 20px 0 0 20px;
+      height: 40px;
+      padding: 0 1rem;
+      margin: 0;
+      color: $gray-6;
+      width: 100%;
+    }
+
+    .form-actions {
+      position: relative;
+      border-radius: 0 20px 20px 0;
+      color: $gray-3;
+
+      &:before {
+        color: inherit;
+        content: "\f002";
+        font-family: "FontAwesome";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        height: 40px;
+        width: 40px;
+        padding-right: 5px;
+        line-height: 40px;
+        z-index: 0;
+        border-left: 1px solid $gray-c;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $orange;
+        color: #fff;
+      }
+    }
+
+    .form-submit {
+      border: 1px solid $gray-c;
+      border-left: 0;
+      border-radius: 0 20px 20px 0;
+      height: 40px;
+      width: 40px;
+      overflow: hidden;
+      padding: 0;
+      text-indent: 40px;
+      margin: 0;
+      position: relative;
+      background: transparent;
+      z-index: 1;
+      box-shadow: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: transparent;
+      }
+    }
+  }
+}
+
+// Tablet (768px to 1023px) -----------------------------
+// ------------------------------------------------------
+@media (min-width: $tab) {
+  .region-header {
+    .search-block-form {
+      width: 200px;
+    }
+  }
+}
+
+// Desktop (1024px to 1339px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $desk) {}
+
+// Wide (over 1340px) -----------------------------------
+// ------------------------------------------------------
+@media (min-width: $wide) {}

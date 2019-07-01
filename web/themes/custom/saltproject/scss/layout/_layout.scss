@@ -1,15 +1,155 @@
-// Mobile (up to 447px) ---------------------------------
+// Mobile (up to 567px) ---------------------------------
 // ------------------------------------------------------
+.mm-page {
+  background: $gray-f1;
+}
 
+.layout-container {
+  background: $gray-f1;
+}
+
+.region-inner {
+  padding: 1.5rem;
+  margin: 0 auto;
+  max-width: $max-width;
+
+  &:empty {
+    padding: 0;
+  }
+}
+
+.layout-columns {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+// Phablet (568px to 767px) ---------------------------
+// ------------------------------------------------------
+@media (min-width: $phab) {
+  .both-sidebars {
+    .layout-columns {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .layout-content {
+      width: 60%;
+      order: 1;
+    }
+
+    .layout-sidebar-first {
+      width: 100%;
+      order: 3;
+    }
+
+    .layout-sidebar-second {
+      width: 40%;
+      order: 2;
+    }
+  }
+
+  .has-sidebar:not(.both-sidebars) {
+    .layout-columns {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .layout-content {
+      width: 60%;
+    }
+
+    .layout-sidebar-first,
+    .layout-sidebar-second {
+      width: 40%;
+    }
+  }
+}
 
 // Tablet (768px to 1023px) -----------------------------
 // ------------------------------------------------------
-@media (min-width: $tab) {}
+@media (min-width: $tab) {
+  .both-sidebars {
+    .layout-content {
+      width: 65%;
+    }
+
+    .layout-sidebar-first {
+      width: 100%;
+    }
+
+    .layout-sidebar-second {
+      width: 35%;
+    }
+  }
+
+  .has-sidebar:not(.both-sidebars) {
+    .layout-content {
+      width: 65%;
+    }
+
+    .layout-sidebar-first,
+    .layout-sidebar-second {
+      width: 35%;
+    }
+  }
+}
 
 // Desktop (1024px to 1339px) ---------------------------
 // ------------------------------------------------------
-@media (min-width: $desk) {}
+@media (min-width: $desk) {
+  .both-sidebars {
+    .layout-content {
+      width: 70%;
+    }
+
+    .layout-sidebar-first {
+      width: 100%;
+    }
+
+    .layout-sidebar-second {
+      width: 30%;
+    }
+  }
+
+  .has-sidebar:not(.both-sidebars) {
+    .layout-content {
+      width: 70%;
+    }
+
+    .layout-sidebar-first,
+    .layout-sidebar-second {
+      width: 30%;
+    }
+  }
+}
 
 // Wide (over 1340px) -----------------------------------
 // ------------------------------------------------------
-@media (min-width: $wide) {}
+@media (min-width: $wide) {
+  .both-sidebars {
+    .layout-content {
+      width: 55%;
+    }
+
+    .layout-sidebar-first {
+      width: 25%;
+      order: 2;
+    }
+
+    .layout-sidebar-second {
+      width: 20%;
+      order: 3;
+    }
+  }
+
+  .has-sidebar:not(.both-sidebars) {
+    .layout-content {
+      width: 75%;
+    }
+
+    .layout-sidebar-first,
+    .layout-sidebar-second {
+      width: 25%;
+    }
+  }
+}

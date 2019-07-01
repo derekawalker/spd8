@@ -54,27 +54,29 @@
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content_top }}
-      {{ page.content }}
-      {{ page.content_bottom }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+    <div class="layout-columns">
+      <div class="layout-content">
+        {{ page.content_top }}
+        {{ page.content }}
+        {{ page.content_bottom }}
+      </div>{# /.layout-content #}
+  
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+  
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+    </div>{# /.layout-columns #}
 
   </main>
 
-  {% if page.footer || page.footer_banner %}
+  {% if page.footer or page.footer_banner %}
     <footer role="contentinfo">
       {{ page.footer_banner }}
       {{ page.footer }}
