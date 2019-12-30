@@ -1,0 +1,13 @@
+local-storage-saltproject:
+  version: 1.0.0
+  footer: true
+  js:
+    js/local-storage-saltproject.js: {}
+react-saltproject:
+  version: 1.0.0
+  footer: true
+  css:
+    theme:
+      ../../../saltproject-react/build/static/css/main.css: {}
+  js:
+    ../../../saltproject-react/build/static/js/main.js: {}

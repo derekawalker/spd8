@@ -1,0 +1,8 @@
+
+saltproject_places.places_controller_places:
+  path: '/places'
+  defaults:
+    _controller: '\Drupal\saltproject_places\Controller\PlacesController::content'
+    _title: 'Places'
+  requirements:
+    _permission: 'access content'

@@ -2,7 +2,5 @@ base:
   css:
     base:
       dist/css/styles.css: {}
-      "//fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900|Raleway:300,400,700|Satisfy":
-        { type: external, minified: true }
-      "//use.fontawesome.com/releases/v5.7.2/css/all.css":
-        { type: external, minified: true }
+      "//fonts.googleapis.com/css?family=Lato:300,400,400i,700,900|Satisfy": { type: external, minified: true }
+      "//use.fontawesome.com/releases/v5.7.2/css/all.css": { type: external, minified: true }

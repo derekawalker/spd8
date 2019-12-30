@@ -6,25 +6,18 @@ $wide: 1340px;
 $max-width: 1440px;
 
 /* Typography */
-$font-main: Lato,
-Arial,
-Helvetica,
-sans-serif;
-$font-header: Raleway,
-Lato,
-Arial,
-Helvetica,
-sans-serif;
-$font-script: Satisfy,
-cursive;
+$font-main: Lato, Arial, Helvetica, sans-serif;
+$font-header: Lato, Arial, Helvetica, sans-serif;
+$font-script: Satisfy, cursive;
 
 /* Colors */
 $orange: #f1623e;
-$teal: #1aa489;
+$teal: #2bb3bc;
+$teal-light: #3ef5d4;
 $black: #000;
-$black-50: rgba(0, 0, 0, .5);
+$black-50: rgba(0, 0, 0, 0.5);
 $white: #fff;
-$white-90: rgba(255, 255, 255, .85);
+$white-90: rgba(255, 255, 255, 0.85);
 $gray-f1: #f1f1f1;
 $gray-e6: #e6e6e6;
 $gray-d: #ddd;
@@ -38,3 +31,9 @@ $gray-9: #999;
 $rad-inner: 3px;
 $rad: 5px;
 $rad-outer: 8px;
+$teal-gradient: linear-gradient(to bottom right, $teal-light, $teal);
+$teal-gradient-transparent: linear-gradient(
+  to bottom right,
+  rgba($teal-light, 0.9),
+  rgba($teal, 0.9)
+);

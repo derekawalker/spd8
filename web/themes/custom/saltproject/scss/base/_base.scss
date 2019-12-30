@@ -4,7 +4,7 @@ html {
   font-size: 16px;
   line-height: 1.5;
   font-family: $font-main;
-  color: $gray-3;
+  color: $black;
   background: $gray-f1;
   box-sizing: border-box;
   font-weight: 300;
@@ -44,7 +44,7 @@ h6 {
   font-family: $font-header;
   font-weight: 400;
   line-height: 1.2;
-  margin: 2rem 0 .25rem;
+  margin: 2rem 0 0.25rem;
 }
 
 h1 {
@@ -93,7 +93,7 @@ table {
     font-weight: 400;
     font-family: $font-header;
     font-size: 1.25em;
-    margin-bottom: .25em;
+    margin-bottom: 0.25em;
   }
 
   thead {
@@ -103,11 +103,11 @@ table {
 
     tr {
       th {
-        padding: .5em .75em;
+        padding: 0.5em 0.75em;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: .1em;
-        font-size: .875em;
+        letter-spacing: 0.1em;
+        font-size: 0.875em;
         border-right: 1px solid $gray-e6;
 
         &:last-child {
@@ -116,7 +116,7 @@ table {
       }
 
       td {
-        padding: .5em .75em;
+        padding: 0.5em 0.75em;
       }
     }
   }
@@ -126,16 +126,16 @@ table {
 
     tr {
       th {
-        padding: .5em .75em;
+        padding: 0.5em 0.75em;
         text-align: right;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: .1em;
-        font-size: .875em;
+        letter-spacing: 0.1em;
+        font-size: 0.875em;
       }
 
       td {
-        padding: .5em .75em;
+        padding: 0.5em 0.75em;
       }
     }
   }
@@ -145,30 +145,32 @@ table {
 
     tr {
       th {
-        padding: .5em .75em;
+        padding: 0.5em 0.75em;
         text-align: center;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: .1em;
-        font-size: .875em;
+        letter-spacing: 0.1em;
+        font-size: 0.875em;
       }
 
       td {
-        padding: .5em .75em;
+        padding: 0.5em 0.75em;
       }
     }
   }
 }
 
-
 // Tablet (768px to 1023px) -----------------------------
 // ------------------------------------------------------
-@media (min-width: $tab) {}
+@media (min-width: $tab) {
+}
 
 // Desktop (1024px to 1339px) ---------------------------
 // ------------------------------------------------------
-@media (min-width: $desk) {}
+@media (min-width: $desk) {
+}
 
 // Wide (over 1340px) -----------------------------------
 // ------------------------------------------------------
-@media (min-width: $wide) {}
+@media (min-width: $wide) {
+}

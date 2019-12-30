@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains saltproject_places.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function saltproject_places_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the saltproject_places module.
+    case 'help.page.saltproject_places':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Loads react on the the /places route.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function saltproject_places_theme() {
+  return [
+    'saltproject_places' => [
+      'variables' => [
+        'title' => NULL,
+        'description' => NULL,
+      ]
+    ],
+    'saltproject_places_block' => [
+      'variables' => [
+        'title' => NULL,
+        'description' => NULL,
+      ],
+      'template' => 'block--saltproject-places',
+    ],
+  ];
+}

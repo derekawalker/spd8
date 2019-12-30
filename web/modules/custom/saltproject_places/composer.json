@@ -1,0 +1,13 @@
+{
+    "name": "saltproject_places",
+    "type": "drupal-module",
+    "description": "Loads react on the the /places route.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/saltproject_places",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/saltproject_places",
+        "source": "http://cgit.drupalcode.org/saltproject_places",
+    },
+}

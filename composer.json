@@ -50,6 +50,8 @@
         "drupal/radioactivity": "^3.0@alpha",
         "drupal/recaptcha": "^2.4",
         "drupal/responsive_menu": "^2.6",
+        "drupal/slick_extras": "^1.0@RC",
+        "drupal/slick_views": "^2.0",
         "drupal/statistics_counter": "^1.0@beta",
         "drupal/views_data_export": "^1.0@beta",
         "drupal/webform": "^5.1",
