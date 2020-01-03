@@ -28,6 +28,7 @@ import {
 import { cities } from "../../utils/data/cities";
 import { lowerUnder } from "../../utils/format/format";
 import Paginator from "../../common/components/Paginator";
+import ListItem from "../ListItem";
 
 // Styled Components.
 import { Wrapper, DescriptionWrapper, ExtrasWrapper } from "./styles";
@@ -51,10 +52,11 @@ let cityOptions = _.map(cities, city => {
   };
 });
 
-cityOptions.unshift({ key: "all", value: "all", text: "All of Utah" });
+cityOptions.unshift({ key: "all", value: "all", text: "Any" });
 
-// const endpoint = "http://saltproject.lndo.site/api/places";
-const endpoint = "/api/places";
+const endpoint = "http://saltproject.lndo.site/api/places";
+console.log("change endpoint!");
+// const endpoint = "/api/places";
 
 let placeTypes = [];
 let indoorTypes = [];
@@ -329,78 +331,6 @@ const Places = props => {
   // Default display.
   let content = <div>No Results</div>;
 
-  // Custom field output.
-  const indoorText = indoor => {
-    if (indoor === "indoor") {
-      return (
-        <Label basic color="grey">
-          <Icon name="cloud" />
-          Indoor
-        </Label>
-      );
-    }
-
-    if (indoor === "outdoor") {
-      return (
-        <Label basic color="grey">
-          <Icon name="sun" />
-          Outdoor
-        </Label>
-      );
-    }
-
-    if (indoor === "both") {
-      return (
-        <Label basic color="grey">
-          <Icon>
-            <FontAwesomeIcon icon={["fas", "cloud-sun"]} />
-          </Icon>
-          Indoor & Outdoor
-        </Label>
-      );
-    }
-  };
-
-  // Custom field output.
-  const cuisineText = array => {
-    let cuisines;
-    if (array.length > 0) {
-      cuisines = _.map(array, (cuisine, index) => (
-        <Label key={index} basic color="orange">
-          <DescriptionWrapper>{cuisine}</DescriptionWrapper>
-        </Label>
-      ));
-    }
-
-    return <div>{cuisines}</div>;
-  };
-
-  // Custom field output.
-  const priceIcons = price => {
-    if (Number(price) > 0) {
-      const dollars = [];
-
-      for (let i = 0; i < Number(price); i++) {
-        dollars[i] = <Icon fitted name="dollar" color="green" />;
-      }
-
-      return <div>{dollars}</div>;
-    }
-  };
-
-  // Custom field output.
-  const starIcons = rating => {
-    if (Number(rating) > 0) {
-      const stars = [];
-
-      for (let i = 0; i < Number(rating); i++) {
-        stars[i] = <Icon fitted name="star" color="yellow" />;
-      }
-
-      return <div>{stars}</div>;
-    }
-  };
-
   // Data filter funnel starts here: ----------
   if (data.length) {
     if (filters.type !== "all") {
@@ -444,7 +374,10 @@ const Places = props => {
 
     // Apply search filter.
     if (searchPhrase !== "") {
-      filteredData = filterByString(filteredData, searchPhrase, ["title"]);
+      filteredData = filterByString(filteredData, searchPhrase, [
+        "title",
+        "city"
+      ]);
     }
 
     // Slice the data for pager.
@@ -458,42 +391,12 @@ const Places = props => {
 
   if (places && places.length) {
     const listItems = places.map((place, index) => (
-      <Item key={index}>
-        <Item.Image src={place.image} />
-
-        <Item.Content>
-          <Item.Header as="a" href={place.path}>
-            {place.title}
-          </Item.Header>
-          <Item.Meta>
-            <DescriptionWrapper>
-              {place.type} in {place.city}
-            </DescriptionWrapper>
-          </Item.Meta>
-
-          <ExtrasWrapper>
-            {place.price ? <div>{priceIcons(place.price)}</div> : null}
-
-            {place.price_food ? (
-              <div>{priceIcons(place.price_food)}</div>
-            ) : null}
-
-            {place.indoor ? (
-              <DescriptionWrapper>
-                {indoorText(place.indoor)}
-              </DescriptionWrapper>
-            ) : null}
-
-            {place.cuisine.length ? (
-              <div>{cuisineText(place.cuisine)}</div>
-            ) : null}
-
-            {place.star_rating ? (
-              <div>{starIcons(place.star_rating)}</div>
-            ) : null}
-          </ExtrasWrapper>
-        </Item.Content>
-      </Item>
+      <ListItem
+        key={index}
+        place={place}
+        setParams={setParams}
+        params={params}
+      />
     ));
 
     // Update content display if data exists.

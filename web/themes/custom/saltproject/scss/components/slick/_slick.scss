@@ -6,6 +6,7 @@
 
   .slick-list {
     margin: 0 -0.5em;
+    padding: 0 30% 0 0;
   }
 
   .slick-slide {
@@ -85,11 +86,21 @@
 // Tablet (768px to 1023px) -----------------------------
 // ------------------------------------------------------
 @media (min-width: $tab) {
+  .slick--optionset--section-slider {
+    .slick-list {
+      padding: 0 20% 0 0;
+    }
+  }
 }
 
 // Desktop (1024px to 1339px) ---------------------------
 // ------------------------------------------------------
 @media (min-width: $desk) {
+  .slick--optionset--section-slider {
+    .slick-list {
+      padding: 0 15% 0 0;
+    }
+  }
 }
 
 // Wide (over 1340px) -----------------------------------

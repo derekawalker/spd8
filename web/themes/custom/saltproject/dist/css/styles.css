@@ -998,7 +998,8 @@ form .button {
   position: relative;
   max-width: 100%; }
   .slick--optionset--section-slider .slick-list {
-    margin: 0 -0.5em; }
+    margin: 0 -0.5em;
+    padding: 0 30% 0 0; }
   .slick--optionset--section-slider .slick-slide {
     margin: 0.5em;
     -webkit-transition: all 0.2s;
@@ -1060,6 +1061,14 @@ form .button {
       left: -15px; }
     .slick--optionset--section-slider .slick__arrow .slick-next {
       right: -15px; }
+
+@media (min-width: 768px) {
+  .slick--optionset--section-slider .slick-list {
+    padding: 0 20% 0 0; } }
+
+@media (min-width: 1024px) {
+  .slick--optionset--section-slider .slick-list {
+    padding: 0 15% 0 0; } }
 
 .view-posts.view-display-id-page_1 .views-row {
   margin-bottom: 1.5rem; }

@@ -295,5 +295,10 @@ export const cities = [
   "Whiterocks",
   "Willard",
   "Woodruff",
-  "Woods Cross"
+  "Woods Cross",
+  "Arches National Park",
+  "Bryce Canyon National Park",
+  "Capitol Reef National Park",
+  "Canyonlands National Park",
+  "Zion National Park"
 ];
