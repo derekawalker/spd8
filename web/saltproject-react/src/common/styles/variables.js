@@ -17,9 +17,15 @@ export default {
   colorGray50: "rgba(0, 0, 0, 0.5)",
   colorGray75: "rgba(0, 0, 0, 0.75)",
   colorPink: "#e2477d",
-  colorTeal: "#68b8bc",
+  colorTeal: "#2BB3BC",
+  colorTealLight: "#3EF5D4",
   colorLime: "#a5d738",
   colorOrange: "#ff8900",
   colorPurple: "#8a63a3",
-  colorRed: "#be0000"
+  colorRed: "#be0000",
+
+  // Rounded Corners.
+  rad: "6px",
+  radOuter: "8px",
+  radInner: "4px"
 };

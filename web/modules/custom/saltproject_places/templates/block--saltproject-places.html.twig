@@ -6,32 +6,7 @@
 * @see template_preprocess_block()
 */
 #}
-{% set classes = [
-    'clear-both',
-] %}
-{{ attach_library('saltproject_places/local-storage-saltproject') }}
 
-<script>
-  (function(ciitesObject) {
-    console.log(ciitesObject);
-  })('test');
-</script>
+{{ attach_library('saltproject_places/react-saltproject') }}
 
-<div{{ attributes.addClass(classes) }}>
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-
-    <div class="small-container">
-        <label>Select a timeframe and refresh the page, or click rerun. localStorage will remember your preference
-        <select>
-        <option selected>Select City</option>
-        <option id="opt1">Daily</option>
-        <option id="opt2">Weekly</option>
-        <option id="opt3">Monthly</option>
-        <option id="opt4">Annually</option>
-        </select>
-        </label>
-
-        <button>Reset preference</button>
-  </div>
-</div>
+<div id="selected-city"></div>

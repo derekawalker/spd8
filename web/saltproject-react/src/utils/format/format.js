@@ -1,3 +1,3 @@
 export const lowerUnder = text => {
-  return text.replace(" ", "_").toLowerCase;
+  return text.replace(" ", "_").toLowerCase();
 };
